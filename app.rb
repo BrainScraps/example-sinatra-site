@@ -19,7 +19,7 @@ module DemoSite
     configure do
       # Set your Google Analytics ID here if you have one:
       # set :google_analytics_id, 'UA-12345678-1'
- 
+
       set :layouts_dir, 'views/_layouts'
       set :partials_dir, 'views/_partials'
     end
@@ -29,7 +29,7 @@ module DemoSite
         status 404
         @page_name = '404'
         @page_title = '404'
-        erb :'404', :layout => :with_sidebar,
+        haml :'404', :layout => :with_sidebar,
                     :layout_options => {:views => settings.layouts_dir}
       end
     end
@@ -49,7 +49,7 @@ module DemoSite
     get '/' do
       @page_name = 'home'
       @page_title = 'Home page'
-      erb :index,
+      haml :index,
         :layout => :full_width,
         :layout_options => {:views => settings.layouts_dir}
     end
@@ -61,39 +61,9 @@ module DemoSite
       @page_name = 'special'
       @page_title = 'A special page'
       @time = Time.now
-      erb :special,
-        :layout => :with_sidebar,
+      haml :special,
+        :layout => :full_width,
         :layout_options => {:views => settings.layouts_dir}
     end
-
-
-    # Catch-all for /something/else/etc/ pages which just display templates.
-    get %r{/([\w\/-]+)/$} do |path|
-      pages = {
-        'help' => {
-          :page_name => 'help',
-          :title => 'Help',
-        },
-        'help/accounts' => {
-          :page_name => 'help_accounts',
-          :title => 'Accounts Help',
-        },
-        # etc
-      }
-      if pages.has_key?(path)
-        @page_name = pages[path][:page_name]
-        @page_title = pages[path][:title]
-        layout = :with_sidebar
-        if pages[path].has_key?(:layout)
-          layout = pages[path][:layout].to_sym
-        end
-        erb @page_name.to_sym,
-          :layout => layout,
-          :layout_options => {:views => settings.layouts_dir}
-      else
-        show_404
-      end
-    end
-
   end
 end

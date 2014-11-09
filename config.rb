@@ -1,5 +1,4 @@
 # Require any additional compass plugins here.
-require 'bootstrap-sass'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -12,9 +11,9 @@ fonts_dir = "public/fonts"
 relative_assets = true
 
 # One of :expanded or :nested or :compact or :compressed
-output_style = :compressed
+output_style = :expanded
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
 
-line_comments = false
+line_comments = true
