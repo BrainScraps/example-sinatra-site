@@ -1,5 +1,6 @@
 require "sinatra/base"
 require "sinatra/reloader"
+require "yaml"
 
 module DemoSite
   class App < Sinatra::Base
@@ -49,6 +50,7 @@ module DemoSite
     get '/' do
       @page_name = 'home'
       @page_title = 'Home page'
+      @people = YAML.load_file('./people.yml')
       haml :index,
         :layout => :full_width,
         :layout_options => {:views => settings.layouts_dir}

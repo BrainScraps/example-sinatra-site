@@ -1,2 +1,7 @@
 
 %p Winner winner!! - this is the index page.
+
+.people-list
+  - @people.each do |person|
+    -# person = person[0]
+    %p= person[1]["name"]
