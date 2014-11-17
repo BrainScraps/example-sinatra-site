@@ -1,9 +1,13 @@
 
-%p Winner winner!! - this is the index page.
+%h2 Hey. Wanna do some CSS ? 
 
-%p this is a big block of things. 
-%p= Forgery(:lorem_ipsum).words(200)
-.people-list
-  - @people.each do |person|
-    -# person = person[0]
-    %p= person[1]["name"]
+%ul
+  %li
+    %a{href: '/docflow/'}
+      Document Flow
+  %li
+    %a{href: '/position/'}
+      Position Property
+  %li
+    %a{href: '/floats/'}
+      Floats!
