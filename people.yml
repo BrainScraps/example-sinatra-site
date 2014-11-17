@@ -1,12 +1,30 @@
 dan:
   name: 'Daniel Tosh'
   username: 'Danbo'
-  profile_pic: 'http://placebear.com/g/200/200'
+  profile_pic: 'http://placebear.com/200/200'
+  quote: 'unleash cross-media information maximize timely deliverables for real-time schemas.'
 leesah:
   name: 'Leesah Cheronimo'
   username: 'LCher'
-  profile_pic: 'http://placebear.com/g/200/200'
+  profile_pic: 'http://fillmurray.com/200/200'
+  quote: 'Completely synergize resource sucking relationships via premier niche markets.'
 wanye:
   name: 'Wanye Duderonimy'
   username: 'wandude'
-  profile_pic: 'http://placebear.com/g/200/200'
+  profile_pic: ' http://nicenicejpg.com/200/200'
+  quote: 'Dynamically innovate resource-leveling customer service for state of the art customer service.'
+haymitch:
+  name: 'Haymitch Sophicles'
+  username: 'martiniman'
+  profile_pic: 'http://placebear.com/200/200'
+  quote: 'unleash cross-media information maximize timely deliverables for real-time schemas.'
+reginald:
+  name: 'Reginald Blackwell'
+  username: 'reggRTB'
+  profile_pic: 'http://fillmurray.com/200/200'
+  quote: 'Completely synergize resource sucking relationships via premier niche markets.'
+lauryn:
+  name: 'Lauryn Hill'
+  username: 'lboogie'
+  profile_pic: ' http://nicenicejpg.com/200/200'
+  quote: 'Dynamically innovate resource-leveling customer service for state of the art customer service.'

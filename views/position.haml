@@ -1,0 +1,23 @@
+.position
+  .static 
+    Static
+    %div static-1
+    %div static-2
+    %div static-3
+  .relative
+    Relative
+    %div relative-1
+    %div.rel-top relative-2 (class="rel-top")
+    %div relative-3
+  .absolute 
+    Absolute
+    %div absolute-1
+    %div.uptop absolute-2 (class="uptop")
+    %div absolute-3
+  .fixed
+    Fixed Div!!!
+
+-# UNCOMMENT THE NEXT LINE FOR LOTS OF TEXT! 
+-# (1..12).each do |i|
+  %p= Forgery(:lorem_ipsum).words(Random.new.rand(150))
+

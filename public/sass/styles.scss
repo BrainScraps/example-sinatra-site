@@ -9,3 +9,169 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size:18px;
 }
+.rounded {
+  border-radius: 12px;
+  background-clip: padding-box;
+}
+
+* {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+//
+//
+//
+//  DOCFLOW
+//
+//
+//
+//
+
+.docflow {
+  margin-top: 2rem;
+  div {
+    border:3px solid purple;
+    margin: 1rem;
+    background-color: green;
+    color: white;
+    line-height: 8rem;
+    padding: 2rem;
+
+    //
+    // block is the default for these divs.
+    display:inline;
+  }
+}
+
+//
+//
+//
+//  POSITION
+//
+//
+//
+//
+.position {
+  margin-top: 2rem;
+
+  & > div {
+    background-color: grey;
+    margin-bottom: 3rem;
+  }
+
+  .static{
+    div {
+      border: 3px solid purple;
+      margin: 1rem;
+    }
+  }
+
+  .relative{
+
+    div {
+      border: 3px solid red;
+      margin: 1rem;
+    }
+    .rel-top{
+      position: relative;
+      left: 80px;
+      top: 80px;
+
+    }
+  }
+
+  .absolute {
+    // dont be confused by this one here
+    position: relative;
+    div {
+      border: 3px solid gold;
+      margin: 1rem;
+    }
+
+    .uptop{
+      //margin: 0;
+      position: absolute;
+      left: 80px;
+      top: 80px;
+
+    }
+  }
+
+  .fixed {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    border: 3px solid red;
+    margin: 0;
+  }
+}
+
+
+//
+//
+//
+//  FLOATS
+//
+//
+//
+//
+
+.floats {
+  width: 960px;
+  margin: 1rem auto;
+  
+  .sidebar {
+    width: 25%;
+    padding: 1em;
+    float: left;
+
+    background-color: #EDFFFA;
+    .side-link {
+      margin: 1em 0;
+      
+      a {
+        text-decoration: none;
+        color: slategrey;
+      }
+    }
+  }
+  .main-content {
+    width: 70%;
+    float: right;
+  }
+
+  .profile {
+    display: block;
+    width: 100%;
+    background-color: #D9F2FF;
+    margin-bottom: 1rem;
+
+    .information{
+      float: left;
+      margin: .2rem 0 0 .5rem;
+
+      p {
+        font-size: .8rem;
+      }
+    }
+    .profile-pic {
+      float: left;
+      margin-left: 3px;
+      img {
+        height: 4.2rem;
+        width: 4.2rem;
+        padding: 6px;
+      }
+    }
+  }
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

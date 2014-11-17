@@ -1,0 +1,17 @@
+.floats.clearfix
+  .sidebar.rounded
+    %h3 BearForumz
+    - (1..5).each do |i|
+      .side-link
+        %a{href: '#'} Interesting link
+  .main-content
+    %p Members
+    - @people.each do |person|
+      - person = person[1]
+      .profile.rounded.clearfix
+        .profile-pic
+          %img.rounded{ src: person["profile_pic"]}
+        .information
+          %p= "Name: #{person["name"] } "
+          %p= "Username: #{person["username"] } "
+          %p= "Quote: #{person["quote"]}"

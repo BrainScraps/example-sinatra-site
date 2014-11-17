@@ -1,6 +1,7 @@
 require "sinatra/base"
 require "sinatra/reloader"
 require "yaml"
+require "forgery"
 
 module DemoSite
   class App < Sinatra::Base
@@ -56,6 +57,30 @@ module DemoSite
         :layout_options => {:views => settings.layouts_dir}
     end
 
+    get '/docflow/' do
+      @page_name = 'document flow'
+      @page_title = 'document flow'
+      haml :docflow,
+        :layout => :full_width,
+        :layout_options => {:views => settings.layouts_dir}
+    end
+
+    get '/position/' do
+      @page_name = 'position'
+      @page_title = 'position'
+      haml :position,
+        :layout => :full_width,
+        :layout_options => {:views => settings.layouts_dir}
+    end
+
+    get '/floats/' do
+      @page_name = 'floats'
+      @page_title = 'floats'
+      @people = YAML.load_file('./people.yml')
+      haml :floats,
+        :layout => :full_width,
+        :layout_options => {:views => settings.layouts_dir}
+    end
 
     # Routes for pages that have unique things...
 
